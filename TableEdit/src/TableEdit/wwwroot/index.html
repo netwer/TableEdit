@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Orders</title>
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body ng-cloak>
     <div ng-controller="TableEditController" class="container">
         <h1>Orders</h1>
+        <hr/>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -16,15 +18,27 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Count</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Price with discount</th>
+                <th>Order date</th>
+                <th>Delivery days count</th>
+                <th>Delivery date</th>
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="order in Orders">
-                <th scope="row">1</th>
+            <tr ng-repeat="order in Orders">                
+                <td> {{$index + 1}} </td>
                 <td>{{order.Id}}</td>
                 <td>{{order.Name}}</td>
                 <td>{{order.Description}}</td>
                 <td>{{order.Count}}</td>
+                <td>{{order.Price}}</td>
+                <td>{{order.Discount}} %</td>
+                <td>{{order.PriceWithDiscount}}</td>
+                <td>{{order.OrderDate}}</td>
+                <td>{{order.DeliveryDaysCount}}</td>
+                <td>{{order.DeliveryDate}}</td>
             </tr>
             </tbody>
         </table>
