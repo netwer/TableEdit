@@ -8,55 +8,143 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body ng-cloak>
-<div ng-controller="TableEditController" class="container">
-    <h1>Orders</h1>
-    <hr/>
-    <table class="table table-striped" id="user-145-orders">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Count</th>
-            <th>Price</th>
-            <th>Discount</th>
-            <th>Price with discount</th>
-            <th>Order date</th>
-            <th>Delivery days count</th>
-            <th>Delivery date</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="order in Orders">                
-            <td> {{$index + 1}} </td>
-            <td>{{order.Id}}</td>
-            <td>{{order.Name}}</td>
-            <td>{{order.Description}}</td>
-            <td>{{order.Count}}</td>
-            <td>{{order.Price}}</td>
-            <td>{{order.Discount}} %</td>
-            <td>{{order.PriceWithDiscount}}</td>
-            <td>{{order.OrderDate}}</td>
-            <td>{{order.DeliveryDaysCount}}</td>
-            <td>{{order.DeliveryDate}}</td>
-        </tr>
-        </tbody>
-    </table>
+<div class="row" ng-controller="TableEditController">
+    <div class="col-md-8">
+        <div class="container">
+            <h1>Orders</h1>
+            <hr />
+            <table class="table table-striped" id="user-145-orders">
+                <thead>
+                <tr>
+                    <th ng-hide="Settings.HideColumn.Number">#</th>
+                    <th ng-hide="Settings.HideColumn.Id">ID</th>
+                    <th ng-hide="Settings.HideColumn.Name">Name</th>
+                    <th ng-hide="Settings.HideColumn.Description">Description</th>
+                    <th ng-hide="Settings.HideColumn.Count">Count</th>
+                    <th ng-hide="Settings.HideColumn.Price">Price</th>
+                    <th ng-hide="Settings.HideColumn.Discount">Discount</th>
+                    <th ng-hide="Settings.HideColumn.PriceWithDiscount">Price with discount</th>
+                    <th ng-hide="Settings.HideColumn.OrderDate">Order date</th>
+                    <th ng-hide="Settings.HideColumn.DeliveryDaysCount">Delivery days count</th>
+                    <th ng-hide="Settings.HideColumn.DeliveryDate">Delivery date</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="order in Orders">
+                        <td ng-hide="Settings.HideColumn.Number">{{$index + 1}} </td>
+                        <td ng-hide="Settings.HideColumn.Id">{{order.Id}}</td>
+                        <td ng-hide="Settings.HideColumn.Name">{{order.Name}}</td>
+                        <td ng-hide="Settings.HideColumn.Description">{{order.Description}}</td>
+                        <td ng-hide="Settings.HideColumn.Count">{{order.Count}}</td>
+                        <td ng-hide="Settings.HideColumn.Price">{{order.Price}}</td>
+                        <td ng-hide="Settings.HideColumn.Discount">{{order.Discount}} %</td>
+                        <td ng-hide="Settings.HideColumn.PriceWithDiscount">{{order.PriceWithDiscount}}</td>
+                        <td ng-hide="Settings.HideColumn.OrderDate">{{order.OrderDate}}</td>
+                        <td ng-hide="Settings.HideColumn.DeliveryDaysCount">{{order.DeliveryDaysCount}}</td>
+                        <td ng-hide="Settings.HideColumn.DeliveryDate">{{order.DeliveryDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="container">
+            <h1>Settings</h1>
+            <hr/>
+            <div class="checkbox">
+                <label>
+                    Hide Number column ?<input type="checkbox"
+                                           name="idColumn"
+                                           ng-click="hideColumn($event, 'Number')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide ID column ?<input type="checkbox"
+                                           name="idColumn"
+                                           ng-click="hideColumn($event, 'Id')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide Name column ?<input type="checkbox"
+                                             name="idColumn"
+                                             ng-click="hideColumn($event, 'Name')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide Description column ?<input type="checkbox"
+                                                    name="idColumn"
+                                                    ng-click="hideColumn($event, 'Description')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide Count column ?<input type="checkbox"
+                                              name="idColumn"
+                                              ng-click="hideColumn($event, 'Count')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide Price column ?<input type="checkbox"
+                                              name="idColumn"
+                                              ng-click="hideColumn($event, 'Price')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide Discount column ?<input type="checkbox"
+                                                 name="idColumn"
+                                                 ng-click="hideColumn($event, 'Discount')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide PriceWithDiscount column ?<input type="checkbox"
+                                                          name="idColumn"
+                                                          ng-click="hideColumn($event, 'PriceWithDiscount')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide OrderDate column ?<input type="checkbox"
+                                                  name="idColumn"
+                                                  ng-click="hideColumn($event, 'OrderDate')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide DeliveryDaysCount column ?<input type="checkbox"
+                                                          name="idColumn"
+                                                          ng-click="hideColumn($event, 'DeliveryDaysCount')" />
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    Hide DeliveryDate column ?<input type="checkbox"
+                                                          name="idColumn"
+                                                          ng-click="hideColumn($event, 'DeliveryDate')" />
+                </label>
+            </div>
+        </div>
+    </div>
 </div>
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="lib/jquery-ui/jquery-ui.js"></script>
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>    
-    <script src="lib/jquery.dragtable.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/tableedit.controller.js"></script>
-    <script src="scripts/services/tableedit.service.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#user-145-orders').dragtable();
-        });
-    </script>
+
+<script src="lib/jquery/dist/jquery.js"></script>
+<script src="lib/jquery-ui/jquery-ui.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="lib/jquery.dragtable.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/tableedit.controller.js"></script>
+<script src="scripts/services/tableedit.service.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#user-145-orders').dragtable();
+    });
+</script>
 </body>
 </html>
