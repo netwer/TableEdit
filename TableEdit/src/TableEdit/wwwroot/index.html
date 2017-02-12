@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="tableEditApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Orders</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body ng-cloak>
+    <div ng-controller="TableEditController" class="container">
+        <h1>Orders</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Count</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="order in Orders">
+                <th scope="row">1</th>
+                <td>{{order.Id}}</td>
+                <td>{{order.Name}}</td>
+                <td>{{order.Description}}</td>
+                <td>{{order.Count}}</td>
+            </tr>
+            </tbody>
+        </table>
+</div>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/tableedit.controller.js"></script>
+    <script src="scripts/services/tableedit.service.js"></script>
+    </body>
+</html>

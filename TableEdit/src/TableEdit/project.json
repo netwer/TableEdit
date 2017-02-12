@@ -5,6 +5,8 @@
   },
 
   "dependencies": {
+    "angularjs": "1.6.2",
+    "bootstrap": "3.3.6",
     "Infrastructure": "1.0.0-*",
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
