@@ -23,9 +23,9 @@ namespace Services
         public string Name { get; private set; }
         public string Description { get; private set; }
         public int Count { get; private set; }
-        public decimal Price { get; private set; }
+        public double Price { get; private set; }
         public double Discount { get; private set; }
-        public decimal PriceWithDiscount { get; private set; }
+        public double PriceWithDiscount { get; private set; }
         public string OrderDate { get; private set; }
         public int DeliveryDaysCount { get; private set; }        
         public string DeliveryDate { get; private set; }

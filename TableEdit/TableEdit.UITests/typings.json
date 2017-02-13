@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {
+    "node": "registry:dt/node#7.0.0+20170204020307",
+    "protractor": "registry:dt/protractor#1.5.0+20161119044246"
+  }
+}

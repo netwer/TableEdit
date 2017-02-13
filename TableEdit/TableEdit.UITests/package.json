@@ -1,0 +1,12 @@
+{
+  "name": "table-edit.uitests",
+  "version": "0.0.0",
+  "description": "TableEdit.UITests",
+  "main": "app.js",
+  "author": {
+    "name": "Artem"
+  },
+  "devDependencies": {
+    "protractor": "^5.1.1"
+  }
+}
