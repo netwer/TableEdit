@@ -6,7 +6,7 @@
     
     // Spec patterns are relative to the current working directly when 
     // protractor is called. 
-    specs: ['example.spec.js'], 
+    specs: ['orderpage.spec.js', 'ordertable.spec.js', 'ordersettings.spec.js'], 
     
     // Options to be passed to Jasmine-node. 
     jasmineNodeOpts: {

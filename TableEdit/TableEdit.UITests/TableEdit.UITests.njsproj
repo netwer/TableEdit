@@ -32,11 +32,15 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="conf.js" />
-    <Compile Include="example.spec.js" />
+    <Compile Include="orderpage.spec.js" />
+    <Compile Include="ordersettings.spec.js" />
+    <Compile Include="ordertable.spec.js" />
+    <Compile Include="utils\tableEditHelper.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="utils\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\node\" />
