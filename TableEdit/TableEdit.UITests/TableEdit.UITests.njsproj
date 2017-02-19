@@ -35,7 +35,6 @@
     <Compile Include="orderpage.spec.js" />
     <Compile Include="ordersettings.spec.js" />
     <Compile Include="ordertable.spec.js" />
-    <Compile Include="utils\tableEditHelper.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
