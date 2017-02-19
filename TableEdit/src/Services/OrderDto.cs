@@ -13,7 +13,7 @@ namespace Services
             Count = order.Count;
             Price = order.Price;
             Discount = order.Discount;
-            PriceWithDiscount = order.PriceWithDiscount;
+            PriceWithDiscount = order.PriceWithDiscount.ToString("#.##");
             OrderDate = order.OrderDate.Date.ToString("d");
             DeliveryDaysCount = order.DeliveryDaysCount;
             DeliveryDate = order.DeliveryDate.ToString("d");
@@ -25,7 +25,7 @@ namespace Services
         public int Count { get; private set; }
         public double Price { get; private set; }
         public double Discount { get; private set; }
-        public double PriceWithDiscount { get; private set; }
+        public string PriceWithDiscount { get; private set; }
         public string OrderDate { get; private set; }
         public int DeliveryDaysCount { get; private set; }        
         public string DeliveryDate { get; private set; }

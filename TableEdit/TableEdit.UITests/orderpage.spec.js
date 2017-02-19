@@ -1,8 +1,8 @@
 ﻿describe('order homepage', function () {
 
-    var TableEditHelper = require('./utils/tableEditHelper');
-    var tableEditHelper = new TableEditHelper();
     var url = 'http://localhost:8543/index.html#!/orders';
+    var rootPath = '#!/orders';
+    browser.driver.manage().window().maximize();
 
     it('should have a title', function () {
         browser.get(url);

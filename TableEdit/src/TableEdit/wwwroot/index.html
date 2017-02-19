@@ -16,32 +16,32 @@
             <table class="table table-striped" id="user-145-orders">
                 <thead>
                 <tr>
-                    <th ng-hide="Settings.HideColumn.Number">#</th>
-                    <th ng-hide="Settings.HideColumn.Id">ID</th>
-                    <th ng-hide="Settings.HideColumn.Name">Name</th>
-                    <th ng-hide="Settings.HideColumn.Description">Description</th>
-                    <th ng-hide="Settings.HideColumn.Count">Count</th>
-                    <th ng-hide="Settings.HideColumn.Price">Price</th>
-                    <th ng-hide="Settings.HideColumn.Discount">Discount</th>
-                    <th ng-hide="Settings.HideColumn.PriceWithDiscount">Price with discount</th>
-                    <th ng-hide="Settings.HideColumn.OrderDate">Order date</th>
-                    <th ng-hide="Settings.HideColumn.DeliveryDaysCount">Delivery days count</th>
-                    <th ng-hide="Settings.HideColumn.DeliveryDate">Delivery date</th>
+                    <th ng-hide="Settings.HideColumn.Number" id="title-number">#</th>
+                    <th ng-hide="Settings.HideColumn.Id" id="title-id">ID</th>
+                    <th ng-hide="Settings.HideColumn.Name" id="title-name">Name</th>
+                    <th ng-hide="Settings.HideColumn.Description" id="title-description">Description</th>
+                    <th ng-hide="Settings.HideColumn.Count" id="title-count">Count</th>
+                    <th ng-hide="Settings.HideColumn.Price" id="title-price">Price</th>
+                    <th ng-hide="Settings.HideColumn.Discount" id="title-discount">Discount</th>
+                    <th ng-hide="Settings.HideColumn.PriceWithDiscount" id="title-pricewithdiscount">Price with discount</th>
+                    <th ng-hide="Settings.HideColumn.OrderDate" id="title-orderdate">Order date</th>
+                    <th ng-hide="Settings.HideColumn.DeliveryDaysCount" id="title-deliverydayscount">Delivery days count</th>
+                    <th ng-hide="Settings.HideColumn.DeliveryDate" id="title-deliverydate">Delivery date</th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="order in Orders">
-                        <td ng-hide="Settings.HideColumn.Number">{{$index + 1}} </td>
-                        <td ng-hide="Settings.HideColumn.Id">{{order.Id}}</td>
-                        <td ng-hide="Settings.HideColumn.Name">{{order.Name}}</td>
-                        <td ng-hide="Settings.HideColumn.Description">{{order.Description}}</td>
-                        <td ng-hide="Settings.HideColumn.Count">{{order.Count}}</td>
-                        <td ng-hide="Settings.HideColumn.Price">{{order.Price}}</td>
-                        <td ng-hide="Settings.HideColumn.Discount">{{order.Discount}} %</td>
-                        <td ng-hide="Settings.HideColumn.PriceWithDiscount">{{order.PriceWithDiscount}}</td>
-                        <td ng-hide="Settings.HideColumn.OrderDate">{{order.OrderDate}}</td>
-                        <td ng-hide="Settings.HideColumn.DeliveryDaysCount">{{order.DeliveryDaysCount}}</td>
-                        <td ng-hide="Settings.HideColumn.DeliveryDate">{{order.DeliveryDate}}</td>
+                        <td ng-hide="Settings.HideColumn.Number" class="cell-number">{{$index + 1}} </td>
+                        <td ng-hide="Settings.HideColumn.Id" class="cell-id">{{order.Id}}</td>
+                        <td ng-hide="Settings.HideColumn.Name" class="cell-name">{{order.Name}}</td>
+                        <td ng-hide="Settings.HideColumn.Description" class="cell-description">{{order.Description}}</td>
+                        <td ng-hide="Settings.HideColumn.Count" class="cell-count">{{order.Count}}</td>
+                        <td ng-hide="Settings.HideColumn.Price" class="cell-price">{{order.Price}}</td>
+                        <td ng-hide="Settings.HideColumn.Discount" class="cell-discount">{{order.Discount}} %</td>
+                        <td ng-hide="Settings.HideColumn.PriceWithDiscount" class="cell-pricewithdiscount">{{order.PriceWithDiscount}}</td>
+                        <td ng-hide="Settings.HideColumn.OrderDate" class="cell-orderdate">{{order.OrderDate}}</td>
+                        <td ng-hide="Settings.HideColumn.DeliveryDaysCount" class="cell-deliverydayscount">{{order.DeliveryDaysCount}}</td>
+                        <td ng-hide="Settings.HideColumn.DeliveryDate" class="cell-deliverydate">{{order.DeliveryDate}}</td>
                     </tr>
                 </tbody>
             </table>
